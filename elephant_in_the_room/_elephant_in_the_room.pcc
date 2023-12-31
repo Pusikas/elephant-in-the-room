@@ -1,11 +1,10 @@
-# CVS $Revision$ $Author$ -- Thu Aug  7 11:38:58 2014 -- reformated by prettylst.pl v1.51 (build 24365)
 CAMPAIGN:The Elephant in the Room
 KEY:The Elephant in the Room
 GAMEMODE:Pathfinder
 GENRE:Fantasy
 BOOKTYPE:Supplement
 SETTING:Generic
-STATUS:BETA
+STATUS:ALPHA
 TYPE:Mammoth Island.Supplement
 PUBNAMELONG:Mammoth Island
 PUBNAMESHORT:MI
@@ -17,10 +16,10 @@ SOURCEDATE:2021-04
 RANK:202104
 ISOGL:YES
 
-#INFOTEXT:ogl.txt
-#INFOTEXT:ogl_declaration.txt
+INFOTEXT:ogl.txt
+INFOTEXT:ogl_declaration.txt
 
-#COVER:elephant_in_the_room.jpg
+COVER:elephant_in_the_room.jpg
 #LOGO:@/publisher_logos/Mammoth_Island.png
 
 COPYRIGHT:Open Game License v 1.0 Copyright 2000, Wizards of the Coast, Inc.

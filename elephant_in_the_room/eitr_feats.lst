@@ -1,11 +1,4 @@
-#  Sat May 18 14:56:38 2019 -- reformated by PCGen PrettyLST v6.08.00
-# CVS $Revision: $ $Author: $ -- Tue Dec 15 01:48:08 2015 -- reformated by PCGen PrettyLST v6.06.00
 SOURCELONG:The Elephant in the Room - Feat Taxes in Pathfinder	SOURCESHORT:EITR	SOURCEWEB:https://mammothisland.itch.io/elephant	SOURCEDATE:2021-04
-# Original Entry by Andrew Maitland
-
-###Block:
-# Feat Name				Unique Key			Type				Required Ability							Required Feat					Required Non-Monster Lvl	Required Race		Required Skill					Required Stat		Required Text																			PRETOTALAB		Description																					Ability								Source Page		Benefits
-# Ability Name			Unique Key			Category of Ability	Type				Required Ability																	Required Non-Monster Lvl	Required Race		Required Skill					Required Stat		Required Text																			PRETOTALAB		Description																					Ability								Source Page		Benefits
 
 CATEGORY=Internal|CMB.MOD	DEFINE:CMB_Hamstring|0	DEFINE:CMD_Hamstring|0	BONUS:VAR|CMB_Hamstring|CMB	BONUS:VAR|CMD_Hamstring|CMD
 
@@ -33,8 +26,8 @@ Whirling Cleave	CATEGORY:FEAT	TYPE:Combat	PREABILITY:2,CATEGORY=FEAT,Cleave,Grea
 CATEGORY=FEAT|Dodge.MOD	DESC:Your training and reflexes allow you to react swiftly to avoid an opponent’s attacks.	ABILITY:Internal|AUTOMATIC|Aspect Combat Bonus ~ Mobility	SOURCEPAGE:p.14	BENEFIT:You gain a +1 dodge bonus to your AC. This bonus increases to +5 against attacks of opportunity caused when you move out of or within a threatened tile. A condition that makes you lose your Dex bonus to AC also makes you lose the benefits of this feat.
 
 # MODs because of Power Attack
-CATEGORY=FEAT|Cleave.MOD	PRE:.CLEAR	PRETOTALAB:1	PREVARGTEQ:PreStatScore_STR,13
-CATEGORY=FEAT|Great Cleave.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Cleave	PRETOTALAB:4	PREVARGTEQ:PreStatScore_STR,13
+CATEGORY=FEAT|Cleave.MOD	PRE:.CLEAR	PRETOTALAB:1	PREVARGTEQ:PreStatScore_STR,13	SOURCEPAGE:p.12
+CATEGORY=FEAT|Great Cleave.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Cleave	PRETOTALAB:4	PREVARGTEQ:PreStatScore_STR,13	SOURCEPAGE:p.16
 # MODs because of Improved xxx is gone
 CATEGORY=FEAT|Greater Bull Rush.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Powerful Maneuvers	PRETOTALAB:6	PREVARGTEQ:PreStatScore_STR,13	SOURCEPAGE:p.17	BENEFIT:You receive a +2 bonus on checks made to bull rush a foe. This bonus stacks with the bonus granted by Powerful Maneuvers. Whenever you bull rush an opponent, his movement provokes attacks of opportunity from all of your allies (but not you).
 CATEGORY=FEAT|Greater Disarm.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Deft Maneuvers	PREMULT:1,[PREVARGTEQ:PreStatScore_DEX,13],[PREVARGTEQ:CombatFeatDexRequirement,13]	PRETOTALAB:6	SOURCEPAGE:p.17	BENEFIT:You receive a +2 bonus on combat maneuver checks made to disarm a foe. This bonus stacks with the bonus granted by Deft Maneuvers. Whenever you successfully disarm an opponent, the weapon lands 15 feet away from its previous wielder, in a random direction.
@@ -91,3 +84,47 @@ CATEGORY=FEAT|Scorpion Style.FORGET
 CATEGORY=FEAT|Stand Still.FORGET
 CATEGORY=FEAT|Throw Anything.FORGET
 CATEGORY=FEAT|Weapon Finesse.FORGET
+
+CATEGORY=FEAT|Catch Off-Guard.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Unarmed Combatant	PREMULT:1,[PREVARGTEQ:PreStatScore_DEX,13],[PREVARGTEQ:FeatDexRequirement,13]	SOURCEPAGE:p.12
+
+Weapon Proficiency (Axes)	CATEGORY:FEAT	TYPE:Combat	AUTO:WEAPONPROF|TYPE.Weapon Group Axes	DESC:You understand how to use all weapons from the Axes group.	SOURCEPAGE:p.29	BENEFIT:You make attack rolls with weapons from the Axes group normally (without the non-proficient penalty).
+Weapon Focus (Axes)	CATEGORY:FEAT	TYPE:Combat	PREWEAPONPROF:1,TYPE.Weapon Group Axes	PRETOTALAB:1	DESC:You are especially good at using Axes.	SOURCEPAGE:p.29	BONUS:WEAPONPROF=TYPE.Weapon Group Axes|TOHIT|1	BENEFIT:You gain a +1 bonus on all attack rolls you make using any weapon from the Axes group.
+
+Weapon Proficiency (Blades/Heavy)	CATEGORY:FEAT	TYPE:Combat	AUTO:WEAPONPROF|TYPE.Weapon Group Blades Heavy	DESC:You understand how to use all weapons from the Heavy Blades group.	SOURCEPAGE:p.29	BENEFIT:You make attack rolls with weapons from the Heavy Blades group normally (without the non-proficient penalty).
+Weapon Focus (Blades/Heavy)	CATEGORY:FEAT	TYPE:Combat	PRETOTALAB:1	PREWEAPONPROF:1,TYPE.Weapon Group Blades Heavy	DESC:You are especially good at using Heavy Blades.	SOURCEPAGE:p.29	BONUS:WEAPONPROF=TYPE.Weapon Group Blades Heavy|TOHIT|1	BENEFIT:You gain a +1 bonus on all attack rolls you make using any weapon from the Heavy Blades group.
+
+Weapon Proficiency (Blades/Light)	CATEGORY:FEAT	TYPE:Combat	AUTO:WEAPONPROF|TYPE.Weapon Group Blades Light	DESC:You understand how to use all weapons from the Light Blades group.	SOURCEPAGE:p.29	BENEFIT:You make attack rolls with weapons from the Light Blades group normally (without the non-proficient penalty).
+Weapon Focus (Blades/Light)	CATEGORY:FEAT	TYPE:Combat	PRETOTALAB:1	PREWEAPONPROF:1,TYPE.Weapon Group Blades Light	DESC:You are especially good at using Light Blades.	SOURCEPAGE:p.29	BONUS:WEAPONPROF=TYPE.Weapon Group Blades Light|TOHIT|1	BENEFIT:You gain a +1 bonus on all attack rolls you make using any weapon from the Light Blades group.
+
+Weapon Proficiency (Bows)	CATEGORY:FEAT	TYPE:Combat	AUTO:WEAPONPROF|TYPE.Weapon Group Bows	DESC:You understand how to use all weapons from the Bows group.	SOURCEPAGE:p.29	BENEFIT:You make attack rolls with weapons from the Bows group normally (without the non-proficient penalty).
+Weapon Focus (Bows)	CATEGORY:FEAT	TYPE:Combat	PRETOTALAB:1	PREWEAPONPROF:1,TYPE.Weapon Group Bows	DESC:You are especially good at using Bows.	SOURCEPAGE:p.29	BONUS:WEAPONPROF=TYPE.Weapon Group Bows|TOHIT|1	BENEFIT:You gain a +1 bonus on all attack rolls you make using any weapon from the Bows group.
+
+Weapon Proficiency (Close)	CATEGORY:FEAT	TYPE:Combat	AUTO:WEAPONPROF|TYPE.Weapon Group Close	DESC:You understand how to use all weapons from the Close group.	SOURCEPAGE:p.29	BENEFIT:You make attack rolls with weapons from the Close group normally (without the non-proficient penalty).
+Weapon Focus (Close)	CATEGORY:FEAT	TYPE:Combat	PRETOTALAB:1	PREWEAPONPROF:1,TYPE.Weapon Group Close	DESC:You are especially good at using Close.	SOURCEPAGE:p.29	BONUS:WEAPONPROF=TYPE.Weapon Group Close|TOHIT|1	BONUS:WEAPONPROF=TYPE.Weapon Group Bows|TOHIT|1	BENEFIT:You gain a +1 bonus on all attack rolls you make using any weapon from the Close group.
+
+Weapon Proficiency (Crossbows)	CATEGORY:FEAT	TYPE:Combat	AUTO:WEAPONPROF|TYPE.Weapon Group Crossbows	DESC:You understand how to use all weapons from the Crossbows group.	SOURCEPAGE:p.29	BENEFIT:You make attack rolls with weapons from the Crossbows group normally (without the non-proficient penalty).
+Weapon Focus (Crossbows)	CATEGORY:FEAT	TYPE:Combat	PRETOTALAB:1	PREWEAPONPROF:1,TYPE.Weapon Group Crossbows	DESC:You are especially good at using Crossbows.	SOURCEPAGE:p.29	BONUS:WEAPONPROF=TYPE.Weapon Group Crossbows|TOHIT|1	BENEFIT:You gain a +1 bonus on all attack rolls you make using any weapon from the Crossbows group.
+
+Weapon Proficiency (Double)	CATEGORY:FEAT	TYPE:Combat	AUTO:WEAPONPROF|TYPE.Weapon Group Double	DESC:You understand how to use all weapons from the Double group.	SOURCEPAGE:p.29	BENEFIT:You make attack rolls with weapons from the Double group normally (without the non-proficient penalty).
+Weapon Focus (Double)	CATEGORY:FEAT	TYPE:Combat	PREWEAPONPROF:1,TYPE.Weapon Group Double	PRETOTALAB:1	DESC:You are especially good at using Double.	SOURCEPAGE:p.29	BONUS:WEAPONPROF=TYPE.Weapon Group Double|TOHIT|1	BENEFIT:You gain a +1 bonus on all attack rolls you make using any weapon from the Double group.
+
+Weapon Proficiency (Flails)	CATEGORY:FEAT	TYPE:Combat	AUTO:WEAPONPROF|TYPE.Weapon Group Flails	DESC:You understand how to use all weapons from the Flails group.	SOURCEPAGE:p.29	BENEFIT:You make attack rolls with weapons from the Flails group normally (without the non-proficient penalty).
+Weapon Focus (Flails)	CATEGORY:FEAT	TYPE:Combat	PREWEAPONPROF:1,TYPE.Weapon Group Flails	PRETOTALAB:1	DESC:You are especially good at using Flails.	SOURCEPAGE:p.29	BONUS:WEAPONPROF=TYPE.Weapon Group Flails|TOHIT|1	BENEFIT:You gain a +1 bonus on all attack rolls you make using any weapon from the Flails group.
+
+Weapon Proficiency (Hammers)	CATEGORY:FEAT	TYPE:Combat	AUTO:WEAPONPROF|TYPE.Weapon Group Hammers	DESC:You understand how to use all weapons from the Hammers group.	SOURCEPAGE:p.29	BENEFIT:You make attack rolls with weapons from the Hammers group normally (without the non-proficient penalty).
+Weapon Focus (Hammers)	CATEGORY:FEAT	TYPE:Combat	PREWEAPONPROF:1,TYPE.Weapon Group Hammers	PRETOTALAB:1	DESC:You are especially good at using Hammers.	SOURCEPAGE:p.29	BONUS:WEAPONPROF=TYPE.Weapon Group Hammers|TOHIT|1	BENEFIT:You gain a +1 bonus on all attack rolls you make using any weapon from the Hammers group.
+
+Weapon Proficiency (Monk)	CATEGORY:FEAT	TYPE:Combat	AUTO:WEAPONPROF|TYPE.Weapon Group Monk	DESC:You understand how to use all weapons from the Monk group.	SOURCEPAGE:p.29	BENEFIT:You make attack rolls with weapons from the Monk group normally (without the non-proficient penalty).
+Weapon Focus (Monk)	CATEGORY:FEAT	TYPE:Combat	PREWEAPONPROF:1,TYPE.Weapon Group Monk	PRETOTALAB:1	DESC:You are especially good at using Monk.	SOURCEPAGE:p.29	BONUS:WEAPONPROF=TYPE.Weapon Group Monk|TOHIT|1	BENEFIT:You gain a +1 bonus on all attack rolls you make using any weapon from the Monk group.
+
+Weapon Proficiency (Natural)	CATEGORY:FEAT	TYPE:Combat	AUTO:WEAPONPROF|TYPE.Weapon Group Natural	DESC:You understand how to use all weapons from the Natural group.	SOURCEPAGE:p.29	BENEFIT:You make attack rolls with weapons from the Natural group normally (without the non-proficient penalty).
+Weapon Focus (Natural)	CATEGORY:FEAT	TYPE:Combat	PREWEAPONPROF:1,TYPE.Weapon Group Natural	PRETOTALAB:1	DESC:You are especially good at using Natural.	SOURCEPAGE:p.29	BONUS:WEAPONPROF=TYPE.Weapon Group Natural|TOHIT|1	BENEFIT:You gain a +1 bonus on all attack rolls you make using any weapon from the Natural group.
+
+Weapon Proficiency (Pole Arms)	CATEGORY:FEAT	TYPE:Combat	AUTO:WEAPONPROF|TYPE.Weapon Group Pole Arms	DESC:You understand how to use all weapons from the Pole Arms group.	SOURCEPAGE:p.29	BENEFIT:You make attack rolls with weapons from the Pole Arms group normally (without the non-proficient penalty).
+Weapon Focus (Pole Arms)	CATEGORY:FEAT	TYPE:Combat	PREWEAPONPROF:1,TYPE.Weapon Group Pole Arms	PRETOTALAB:1	DESC:You are especially good at using Pole Arms.	SOURCEPAGE:p.29	BONUS:WEAPONPROF=TYPE.Weapon Group Pole Arms|TOHIT|1	BENEFIT:You gain a +1 bonus on all attack rolls you make using any weapon from the Pole Arms group.
+
+Weapon Proficiency (Spears)	CATEGORY:FEAT	TYPE:Combat	AUTO:WEAPONPROF|TYPE.Weapon Group Spears	DESC:You understand how to use all weapons from the Spears group.	SOURCEPAGE:p.29	BENEFIT:You make attack rolls with weapons from the Spears group normally (without the non-proficient penalty).
+Weapon Focus (Spears)	CATEGORY:FEAT	TYPE:Combat	PREWEAPONPROF:1,TYPE.Weapon Group Spears	PRETOTALAB:1	DESC:You are especially good at using Spears.	SOURCEPAGE:p.29	BONUS:WEAPONPROF=TYPE.Weapon Group Spears|TOHIT|1	BENEFIT:You gain a +1 bonus on all attack rolls you make using any weapon from the Spears group.
+
+Weapon Proficiency (Thrown)	CATEGORY:FEAT	TYPE:Combat	AUTO:WEAPONPROF|TYPE.Weapon Group Thrown	DESC:You understand how to use all weapons from the Thrown group.	SOURCEPAGE:p.29	BENEFIT:You make attack rolls with weapons from the Thrown group normally (without the non-proficient penalty).
+Weapon Focus (Thrown)	CATEGORY:FEAT	TYPE:Combat	PREWEAPONPROF:1,TYPE.Weapon Group Thrown	PRETOTALAB:1	DESC:You are especially good at using Thrown.	SOURCEPAGE:p.29	BONUS:WEAPONPROF=TYPE.Weapon Group Thrown|TOHIT|1	BENEFIT:You gain a +1 bonus on all attack rolls you make using any weapon from the Thrown group.
