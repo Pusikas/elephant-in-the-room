@@ -1,0 +1,160 @@
+SOURCELONG:The Elephant in the Room - Feat Taxes in Pathfinder	SOURCESHORT:EITR	SOURCEWEB:https://mammothisland.itch.io/elephant	SOURCEDATE:2021-04
+
+CATEGORY=Special Ability|Monk ~ Unarmed Strike.MOD	DESC:At 1st level, a monk gains Unarmed Combatant as a bonus feat. A monk's attacks may be with fist, elbows, knees, and feet. This means that a monk may make unarmed strikes with his hands full. There is no such thing as an off-hand attack for a monk striking unarmed. A monk may thus apply his full Strength bonus on damage rolls for all his unarmed strikes. Usually a monk's unarmed strikes deal lethal damage, but he can choose to deal nonlethal damage instead with no penalty on his attack roll. He has the same choice to deal lethal or nonlethal damage while grappling. A monk's unarmed strike is treated as both a manufactured weapon and a natural weapon for the purpose of spells and effects that enhance or improve either manufactured weapons or natural weapons. A monk also deals more damage with his unarmed strikes than a normal person would, as shown above on Table 3-10. The unarmed damage values listed on Table 3-10 is for Medium monks. A Small monk deals less damage than the amount given there with his unarmed attacks, while a Large monk deals more damage; see Small or Large Monk Unarmed Damage on the table given below.	ABILITY:FEAT|AUTOMATIC|.CLEAR	ABILITY:FEAT|AUTOMATIC|Unarmed Combatant
+
+# Monk Bonus Feats lvl 1
+# FROM: Catch Off-Guard, Combat Reflexes, Deflect Arrows, Dodge, Improved Grapple, Scorpion Style, and Throw Anything
+# TO: Catch Off-Guard, Combat Reflexes, Deflect Arrows, Dodge, and Scorpion Stance
+
+CATEGORY=Special Ability|Monk Bonus Feat ~ Improved Grapple.FORGET
+CATEGORY=Internal|Monk Bonus Feat ~ Default.MOD	BONUS:VAR|MonkBonusFeat_ImprovedGrapple|-1|PREVARGTEQ:MonkBonusFeatLVL,1
+
+CATEGORY=Special Ability|Monk ~ Monk Bonus Feat.MOD	DEFINE:MonkBonusFeat_ScorpionStance|0
+CATEGORY=Internal|Monk Bonus Feat ~ Default.MOD	BONUS:VAR|MonkBonusFeat_ScorpionStance|1|PREVARGTEQ:MonkBonusFeatLVL,1
+Scorpion Stance	KEY:Monk Bonus Feat ~ Scorpion Stance	CATEGORY:Special Ability	TYPE:MonkBonusFeat	VISIBLE:DISPLAY	!PREABILITY:1,CATEGORY=FEAT,Scorpion Stance	PREVARGTEQ:MonkBonusFeatLVL,1	PREVARGTEQ:MonkBonusFeat_ScorpionStance,1	ABILITY:FEAT|VIRTUAL|Scorpion Stance
+
+CATEGORY=Special Ability|Monk Bonus Feat ~ Scorpion Style.FORGET
+CATEGORY=Internal|Monk Bonus Feat ~ Default.MOD	BONUS:VAR|MonkBonusFeat_ScorpionStyle|-1|PREVARGTEQ:MonkBonusFeatLVL,1
+
+CATEGORY=Special Ability|Monk Bonus Feat ~ Throw Anything.FORGET
+CATEGORY=Internal|Monk Bonus Feat ~ Default.MOD	BONUS:VAR|MonkBonusFeat_ThrowAnything|-1|PREVARGTEQ:MonkBonusFeatLVL,1
+
+# Monk Bonus Feats lvl 6
+# FROM: Gorgon’s Fist, Improved Bull Rush, Improved Disarm, Improved Feint, Improved Trip, and Mobility
+# TO: Deft Maneuvers, Gorgon’s Fist, Greater Grapple, and Powerful Maneuvers
+
+CATEGORY=Special Ability|Monk ~ Monk Bonus Feat.MOD	DEFINE:MonkBonusFeat_DeftManeuvers|0
+CATEGORY=Internal|Monk Bonus Feat ~ Default.MOD	BONUS:VAR|MonkBonusFeat_DeftManeuvers|1|PREVARGTEQ:MonkBonusFeatLVL,6
+Deft Maneuvers	KEY:Monk Bonus Feat ~ Deft Maneuvers	CATEGORY:Special Ability	TYPE:MonkBonusFeat	VISIBLE:DISPLAY	!PREABILITY:1,CATEGORY=FEAT,Deft Maneuvers	PREVARGTEQ:MonkBonusFeatLVL,6	PREVARGTEQ:MonkBonusFeat_DeftManeuvers,1	ABILITY:FEAT|VIRTUAL|Deft Maneuvers
+
+CATEGORY=Special Ability|Monk ~ Monk Bonus Feat.MOD	DEFINE:MonkBonusFeat_GreaterGrapple|0
+CATEGORY=Internal|Monk Bonus Feat ~ Default.MOD	BONUS:VAR|MonkBonusFeat_GreaterGrapple|1|PREVARGTEQ:MonkBonusFeatLVL,6
+Deft Maneuvers	KEY:Monk Bonus Feat ~ Greater Grapple	CATEGORY:Special Ability	TYPE:MonkBonusFeat	VISIBLE:DISPLAY	!PREABILITY:1,CATEGORY=FEAT,Greater Grapple	PREVARGTEQ:MonkBonusFeatLVL,6	PREVARGTEQ:MonkBonusFeat_GreaterGrapple,1	ABILITY:FEAT|VIRTUAL|Greater Grapple
+
+CATEGORY=Special Ability|Monk ~ Monk Bonus Feat.MOD	DEFINE:MonkBonusFeat_PowerfulManeuvers|0
+CATEGORY=Internal|Monk Bonus Feat ~ Default.MOD	BONUS:VAR|MonkBonusFeat_PowerfulManeuvers|1|PREVARGTEQ:MonkBonusFeatLVL,6
+Powerful Maneuvers	KEY:Monk Bonus Feat ~ Powerful Maneuvers	CATEGORY:Special Ability	TYPE:MonkBonusFeat	VISIBLE:DISPLAY	!PREABILITY:1,CATEGORY=FEAT,Powerful Maneuvers	PREVARGTEQ:MonkBonusFeatLVL,6	PREVARGTEQ:MonkBonusFeat_PowerfulManeuvers,1	ABILITY:FEAT|VIRTUAL|Powerful Maneuvers
+
+CATEGORY=Special Ability|Monk Bonus Feat ~ Improved Bull Rush.FORGET
+CATEGORY=Internal|Monk Bonus Feat ~ Default.MOD	BONUS:VAR|MonkBonusFeat_ImprovedBullRush|-1|PREVARGTEQ:MonkBonusFeatLVL,6
+
+CATEGORY=Special Ability|Monk Bonus Feat ~ Improved Disarm.FORGET
+CATEGORY=Internal|Monk Bonus Feat ~ Default.MOD	BONUS:VAR|MonkBonusFeat_ImprovedDisarm|-1|PREVARGTEQ:MonkBonusFeatLVL,6
+
+CATEGORY=Special Ability|Monk Bonus Feat ~ Improved Feint.FORGET
+CATEGORY=Internal|Monk Bonus Feat ~ Default.MOD	BONUS:VAR|MonkBonusFeat_ImprovedFeint|-1|PREVARGTEQ:MonkBonusFeatLVL,6
+
+CATEGORY=Special Ability|Monk Bonus Feat ~ Improved Trip.FORGET
+CATEGORY=Internal|Monk Bonus Feat ~ Default.MOD	BONUS:VAR|MonkBonusFeat_ImprovedTrip|-1|PREVARGTEQ:MonkBonusFeatLVL,6
+
+CATEGORY=Special Ability|Monk Bonus Feat ~ Mobility.FORGET
+CATEGORY=Internal|Monk Bonus Feat ~ Default.MOD	BONUS:VAR|MonkBonusFeat_Mobility|-1|PREVARGTEQ:MonkBonusFeatLVL,6
+
+# Monk Bonus Feats lvl 10
+# FROM: Improved Critical, Medusa’s Wrath, Snatch Arrows, and Spring Attack
+# TO: Improved Critical, Medusa’s Wrath, Snatch Arrows, and Spring Attack
+# nothing to do
+
+# Sorcerer Bloodline Feats
+
+CATEGORY=Internal|Sorcerer Bloodline Feat ~ Cleave.MOD	PRE:.CLEAR	PRETOTALAB:1	PREVARGTEQ:PreStatScore_STR,13	PREVARGTEQ:Sorcerer_BloodlineFeat_Cleave,1
+CATEGORY=Internal|Sorcerer Bloodline Feat ~ Precise Shot.MOD	PRE:.CLEAR	PREVARGTEQ:Sorcerer_BloodlineFeat_PreciseShot,1
+CATEGORY=Internal|Sorcerer Bloodline Feat ~ Point-Blank Shot.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Precise Shot	PREVARGTEQ:Sorcerer_BloodlineFeat_PointBlankShot,1
+
+# Combat Expertise -> Deft Maneuvers
+CATEGORY=Internal|Sorcerer Bloodline Feat ~ Combat Expertise.FORGET
+CATEGORY=Internal|Bloodline Tracker.MOD	DEFINE:Sorcerer_BloodlineFeat_DeftManeuvers|0
+Deft Maneuvers	KEY:Sorcerer Bloodline Feat ~ Deft Maneuvers	CATEGORY:Internal	TYPE:Sorcerer Bloodline Feat	PREMULT:1,[PREVARGTEQ:PreStatScore_DEX,13],[PREVARGTEQ:CombatFeatDexRequirement,13]	PREVARGTEQ:Sorcerer_BloodlineFeat_DeftManeuvers,1	DESC:You are skilled in a variety of dextrous combat maneuvers.	ABILITY:FEAT|AUTOMATIC|Deft Maneuvers	SOURCEPAGE:p.35	BENEFIT:You do not provoke an attack of opportunity when performing a trip, disarm, dirty trick, feint, reposition, or steal combat maneuver. In addition, you receive a +2 bonus on checks with trip, disarm, dirty trick, feint, reposition, and steal combat maneuvers, and you can make a Bluff check to feint in combat as a move action. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to trip, disarm, dirty trick, feint, reposition, or steal from you.
+
+# Improved Bull Rush -> Greater Bull Rush
+CATEGORY=Internal|Sorcerer Bloodline Feat ~ Improved Bull Rush.FORGET
+CATEGORY=Internal|Bloodline Tracker.MOD	DEFINE:Sorcerer_BloodlineFeat_GreaterBullRush|0
+Greater Bull Rush	KEY:Sorcerer Bloodline Feat ~ Greater Bull Rush	CATEGORY:Internal	TYPE:Sorcerer Bloodline Feat	PREABILITY:1,CATEGORY=FEAT,Powerful Maneuvers	PRETOTALAB:6	PREVARGTEQ:PreStatScore_STR,13	PREVARGTEQ:Sorcerer_BloodlineFeat_GreaterBullRush,1	DESC:Your bull rush attacks throw enemies off balance.	ABILITY:FEAT|AUTOMATIC|Greater Bull Rush	SOURCEPAGE:p.35	BENEFIT:You receive a +2 bonus on checks made to bull rush a foe. This bonus stacks with the bonus granted by Powerful Maneuvers. Whenever you bull rush an opponent, his movement provokes attacks of opportunity from all of your allies (but not you).
+
+# Improved Disarm -> Greater Disarm
+CATEGORY=Internal|Sorcerer Bloodline Feat ~ Improved Disarm.FORGET
+CATEGORY=Internal|Bloodline Tracker.MOD	DEFINE:Sorcerer_BloodlineFeat_GreaterDisarm|0
+Greater Disarm	KEY:Sorcerer Bloodline Feat ~ Greater Disarm	CATEGORY:Internal	TYPE:Sorcerer Bloodline Feat	PREABILITY:1,CATEGORY=FEAT,Deft Maneuvers	PREMULT:1,[PREVARGTEQ:PreStatScore_DEX,13],[PREVARGTEQ:CombatFeatDexRequirement,13]	PRETOTALAB:6	PREVARGTEQ:Sorcerer_BloodlineFeat_GreaterDisarm,1	DESC:You can knock weapons far from an enemy’s grasp.	ABILITY:FEAT|AUTOMATIC|Greater Disarm	SOURCEPAGE:p.35	BENEFIT:You receive a +2 bonus on combat maneuver checks made to disarm a foe. This bonus stacks with the bonus granted by Deft Maneuvers. Whenever you successfully disarm an opponent, the weapon lands 15 feet away from its previous wielder, in a random direction.
+
+# Improved Feint -> Greater Feint
+CATEGORY=Internal|Sorcerer Bloodline Feat ~ Improved Feint.FORGET
+CATEGORY=Internal|Bloodline Tracker.MOD	DEFINE:Sorcerer_BloodlineFeat_GreaterFeint|0
+Greater Feint	KEY:Sorcerer Bloodline Feat ~ Greater Feint	CATEGORY:Internal	TYPE:Sorcerer Bloodline Feat	PREABILITY:1,CATEGORY=FEAT,Deft Maneuvers	PREMULT:1,[PREVARGTEQ:PreStatScore_DEX,13],[PREVARGTEQ:CombatFeatDexRequirement,13]	PRETOTALAB:6	PREVARGTEQ:Sorcerer_BloodlineFeat_GreaterFeint,1	DESC:You are skilled at making foes overreact to your attacks.	ABILITY:FEAT|AUTOMATIC|Greater Feint	SOURCEPAGE:p.35	BENEFIT:Whenever you use feint to cause an opponent to lose his Dexterity bonus, he loses that bonus until the beginning of your next turn, in addition to losing his Dexterity bonus against your next attack.
+
+# Improved Grapple -> Greater Grapple
+CATEGORY=Internal|Sorcerer Bloodline Feat ~ Improved Grapple.FORGET
+CATEGORY=Internal|Bloodline Tracker.MOD	DEFINE:Sorcerer_BloodlineFeat_GreaterGrapple|0
+Greater Grapple	KEY:Sorcerer Bloodline Feat ~ Greater Grapple	CATEGORY:Internal	TYPE:Sorcerer Bloodline Feat	PREABILITY:1,CATEGORY=FEAT,Unarmed Combatant	PREMULT:1,[PREVARGTEQ:PreStatScore_DEX,13],[PREVARGTEQ:FeatDexRequirement,13]	PRETOTALAB:6	PREVARGTEQ:Sorcerer_BloodlineFeat_GreaterGrapple,1	DESC:Maintaining a grapple is second nature to you.	ABILITY:FEAT|AUTOMATIC|Greater Grapple	SOURCEPAGE:p.35	BENEFIT:You receive a +2 bonus on checks made to grapple a foe. This bonus stacks with the bonus granted by Unarmed Combatant. Once you have grappled a creature, maintaining the grapple is a move action. This feat allows you to make two grapple checks each round (to move, harm, or pin your opponent), but you are not required to make two checks. You only need to succeed at one of these checks to maintain the grapple.
+
+# Improved Overrun -> Greater Overrun
+CATEGORY=Internal|Sorcerer Bloodline Feat ~ Improved Overrun.FORGET
+CATEGORY=Internal|Bloodline Tracker.MOD	DEFINE:Sorcerer_BloodlineFeat_GreaterOverrun|0
+Greater Overrun	KEY:Sorcerer Bloodline Feat ~ Greater Overrun	CATEGORY:Internal	TYPE:Sorcerer Bloodline Feat	PREABILITY:1,CATEGORY=FEAT,Powerful Maneuvers	PRETOTALAB:6	PREVARGTEQ:PreStatScore_STR,13	PREVARGTEQ:Sorcerer_BloodlineFeat_GreaterOverrun,1	DESC:Enemies must dive to avoid your dangerous move.	ABILITY:FEAT|AUTOMATIC|Greater Overrun	SOURCEPAGE:p.35	BENEFIT:You receive a +2 bonus on checks made to overrun a foe. This bonus stacks with the bonus granted by Powerful Maneuvers. Whenever you overrun opponents, they provoke attacks of opportunity if they are knocked prone by your overrun.
+
+# Improved Sunder -> Greater Sunder
+CATEGORY=Internal|Sorcerer Bloodline Feat ~ Improved Sunder.FORGET
+CATEGORY=Internal|Bloodline Tracker.MOD	DEFINE:Sorcerer_BloodlineFeat_GreaterSunder|0
+Greater Sunder	KEY:Sorcerer Bloodline Feat ~ Greater Sunder	CATEGORY:Internal	TYPE:Sorcerer Bloodline Feat	PREABILITY:1,CATEGORY=FEAT,Powerful Maneuvers	PRETOTALAB:6	PREVARGTEQ:PreStatScore_STR,13	PREVARGTEQ:Sorcerer_BloodlineFeat_GreaterSunder,1	DESC:Your devastating strikes cleave through weapons and armor and into their wielders, damaging both item and wielder alike in a single terrific strike.	ABILITY:FEAT|AUTOMATIC|Greater Sunder	SOURCEPAGE:p.35	BENEFIT:You receive a +2 bonus on checks made to sunder an item. This bonus stacks with the bonus granted by Powerful Maneuvers. Whenever you sunder to destroy a weapon, shield, or suit of armor, any excess damage is applied to the item’s wielder. No damage is transferred if you decide to leave the item with 1 hit point.
+
+# Improved Trip -> Greater Trip
+CATEGORY=Internal|Sorcerer Bloodline Feat ~ Improved Trip.FORGET
+CATEGORY=Internal|Bloodline Tracker.MOD	DEFINE:Sorcerer_BloodlineFeat_GreaterTrip|0
+Greater Trip	KEY:Sorcerer Bloodline Feat ~ Greater Trip	CATEGORY:Internal	TYPE:Sorcerer Bloodline Feat	PREABILITY:1,CATEGORY=FEAT,Deft Maneuvers	PREMULT:1,[PREVARGTEQ:PreStatScore_DEX,13],[PREVARGTEQ:CombatFeatDexRequirement,13]	PRETOTALAB:6	PREVARGTEQ:Sorcerer_BloodlineFeat_GreaterTrip,1	DESC:You can make free attacks on foes that you knock down.	ABILITY:FEAT|AUTOMATIC|Greater Trip	SOURCEPAGE:p.35	BENEFIT:You receive a +2 bonus on checks made to trip a foe. This bonus stacks with the bonus granted by Deft Maneuvers. Whenever you successfully trip an opponent, that opponent provokes attacks of opportunity.
+
+# Improved Unarmed Strike -> Unarmed Combatant
+CATEGORY=Internal|Sorcerer Bloodline Feat ~ Improved Unarmed Strike.FORGET
+CATEGORY=Internal|Bloodline Tracker.MOD	DEFINE:Sorcerer_BloodlineFeat_UnarmedCombatant|0
+Unarmed Combatant	KEY:Sorcerer Bloodline Feat ~ Unarmed Combatant	CATEGORY:Internal	TYPE:Sorcerer Bloodline Feat	PREVARGTEQ:Sorcerer_BloodlineFeat_UnarmedCombatant,1	DESC:You are skilled while fighting unarmed.	ABILITY:FEAT|AUTOMATIC|Unarmed Combatant	SOURCEPAGE:p.35	BENEFIT:You are considered to be armed even when unarmed - you do not provoke attacks of opportunity when you attack foes while unarmed. Your unarmed strikes now deal 1d6 damage if you are medium sized or 1d4 damage if you are small sized, and you can deal lethal or nonlethal damage, at your choice. You do not provoke an attack of opportunity when performing a grapple combat maneuver. In addition, you receive a +2 bonus on checks made to grapple a foe. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to grapple you.
+
+# Mobility -> Spring Attack
+CATEGORY=Internal|Sorcerer Bloodline Feat ~ Mobility.FORGET
+CATEGORY=Internal|Bloodline Tracker.MOD	DEFINE:Sorcerer_BloodlineFeat_SpringAttack|0
+Spring Attack	KEY:Sorcerer Bloodline Feat ~ Spring Attack	CATEGORY:Internal	TYPE:Sorcerer Bloodline Feat	PREABILITY:1,CATEGORY=FEAT,Dodge	PREMULT:1,[PREVARGTEQ:PreStatScore_DEX,13],[PREVARGTEQ:FeatDexRequirement,13]	PREVARGTEQ:Sorcerer_BloodlineFeat_SpringAttack,1	DESC:You can deftly move up to a foe, strike, and withdraw before he can react.	ABILITY:FEAT|AUTOMATIC|Spring Attack	SOURCEPAGE:p.35	BENEFIT:As a full-round action, you can move up to your speed and make a single melee attack without provoking any attacks of opportunity from the target of your attack. You can move both before and after the attack, but you must move at least 10 feet before the attack and the total distance that you move cannot be greater than your speed. You cannot use this ability to attack a foe that is adjacent to you at the start of your turn.
+
+# Power Attack -> Powerful Maneuvers
+CATEGORY=Internal|Sorcerer Bloodline Feat ~ Power Attack.FORGET
+CATEGORY=Internal|Bloodline Tracker.MOD	DEFINE:Sorcerer_BloodlineFeat_PowerfulManeuvers|0
+Powerful Maneuvers	KEY:Sorcerer Bloodline Feat ~ Powerful Maneuvers	CATEGORY:Internal	TYPE:Sorcerer Bloodline Feat	PRETOTALAB:1	PREVARGTEQ:Sorcerer_BloodlineFeat_PowerfulManeuvers,1	PREVARGTEQ:PreStatScore_STR,13	DESC:You are skilled in a variety of strength-focused combat maneuvers.	ABILITY:FEAT|AUTOMATIC|Powerful Maneuvers	SOURCEPAGE:p.35	BENEFIT:You do not provoke an attack of opportunity when performing a bull rush, drag, hamstring, overrun, or sunder combat maneuver. In addition, you receive a +2 bonus on checks with these combat maneuvers. You also receive a +2 bonus to your Combat Maneuver Defense whenever an opponent tries to bull rush, hamstring, or overrun you or sunder your gear. Targets of your overrun attempts may not choose to avoid you.
+
+# Weapon Finesse -> Agile Combatant
+CATEGORY=Internal|Sorcerer Bloodline Feat ~ Weapon Finesse.FORGET
+CATEGORY=Internal|Bloodline Tracker.MOD	DEFINE:Sorcerer_BloodlineFeat_AgileCombatant|0
+Agile Combatant	KEY:Sorcerer Bloodline Feat ~ Agile Combatant	CATEGORY:Internal	TYPE:Sorcerer Bloodline Feat	PREVARGTEQ:Sorcerer_BloodlineFeat_AgileCombatant,1	DESC:You’ve learned to use your quickness in place of brute force when performing combat maneuvers.	ABILITY:FEAT|AUTOMATIC|Agile Combatant	SOURCEPAGE:p.35	BENEFIT:You add your Dexterity bonus to your base attack bonus and size bonus when determining your Combat Maneuver Bonus (see Combat) instead of your Strength bonus.
+
+CATEGORY=Internal|Aberrant Bloodline ~ Feat Tracker.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_ImprovedDisarm|.CLEAR
+CATEGORY=Internal|Aberrant Bloodline ~ Feat Tracker.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_ImprovedGrapple|.CLEAR
+CATEGORY=Internal|Aberrant Bloodline ~ Feat Tracker.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_ImprovedUnarmedStrike|.CLEAR
+CATEGORY=Internal|Aberrant Bloodline ~ Feat Tracker.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_GreaterDisarm|1
+CATEGORY=Internal|Aberrant Bloodline ~ Feat Tracker.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_GreaterGrapple|1
+CATEGORY=Internal|Aberrant Bloodline ~ Feat Tracker.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_UnarmedCombatant|1
+
+CATEGORY=Internal|Bloodline Feat Tracker ~ Abyssal.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_ImprovedBullRush|.CLEAR
+CATEGORY=Internal|Bloodline Feat Tracker ~ Abyssal.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_ImprovedSunder|.CLEAR
+CATEGORY=Internal|Bloodline Feat Tracker ~ Abyssal.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_PowerAttack|.CLEAR
+CATEGORY=Internal|Bloodline Feat Tracker ~ Abyssal.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_GreaterBullRush|1
+CATEGORY=Internal|Bloodline Feat Tracker ~ Abyssal.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_GreaterSunder|1
+CATEGORY=Internal|Bloodline Feat Tracker ~ Abyssal.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_PowerfulManeuvers|1
+
+CATEGORY=Internal|Celestial Bloodline ~ Feat Tracker.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_Mobility|.CLEAR
+CATEGORY=Internal|Celestial Bloodline ~ Feat Tracker.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_WeaponFinesse|.CLEAR
+CATEGORY=Internal|Celestial Bloodline ~ Feat Tracker.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_SpringAttack|1
+CATEGORY=Internal|Celestial Bloodline ~ Feat Tracker.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_AgileCombatant|1
+
+CATEGORY=Internal|Draconic Bloodline ~ Feat Tracker.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_PowerAttack|.CLEAR
+CATEGORY=Internal|Draconic Bloodline ~ Feat Tracker.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_PowerfulManeuvers|1
+
+CATEGORY=Internal|Draconic Bloodline ~ Feat Tracker.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_PowerAttack|.CLEAR
+CATEGORY=Internal|Draconic Bloodline ~ Feat Tracker.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_PowerfulManeuvers|1
+
+CATEGORY=Internal|Elemental Bloodline ~ Feat Tracker.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_PowerAttack|.CLEAR
+CATEGORY=Internal|Elemental Bloodline ~ Feat Tracker.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_WeaponFinesse|.CLEAR
+CATEGORY=Internal|Elemental Bloodline ~ Feat Tracker.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_PowerfulManeuvers|1
+CATEGORY=Internal|Elemental Bloodline ~ Feat Tracker.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_AgileCombatant|1
+
+CATEGORY=Internal|Fey Bloodline ~ Feat Tracker.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_Mobility|.CLEAR
+CATEGORY=Internal|Fey Bloodline ~ Feat Tracker.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_SpringAttack|1
+
+CATEGORY=Internal|Infernal Bloodline ~ Feat Tracker.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_CombatExpertise|.CLEAR
+CATEGORY=Internal|Infernal Bloodline ~ Feat Tracker.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_ImprovedDisarm|.CLEAR
+CATEGORY=Internal|Infernal Bloodline ~ Feat Tracker.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_DeftManeuvers|1
+CATEGORY=Internal|Infernal Bloodline ~ Feat Tracker.MOD	BONUS:VAR|Sorcerer_BloodlineFeat_GreaterDisarm|1
