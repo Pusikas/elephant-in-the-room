@@ -13,7 +13,7 @@ SOURCELONG:The Elephant in the Room - Feat Taxes in Pathfinder
 SOURCESHORT:EITR
 SOURCEWEB:https://mammothisland.itch.io/elephant
 SOURCEDATE:2021-04
-RANK:202104
+RANK:8
 ISOGL:YES
 
 INFOTEXT:ogl.txt
@@ -27,5 +27,6 @@ COPYRIGHT:System Reference Document. Copyright 2000, Wizards of the Coast, Inc.;
 COPYRIGHT:Pathfinder RPG Core Rulebook. Copyright 2009, Paizo Publishing, LLC; Author: Jason Bulmahn, based on material by Jonathan Tweet, Monte Cook, and Skip Williams.
 COPYRIGHT:Pathfinder RPG Bestiary, Copyright 2009, Paizo Publishing, LLC; Author: Jason Bulmahn, based on material by Jonathan Tweet, Monte Cook, and Skip Williams.
 
+ABILITYCATEGORY:eitr_abilitycategories.lst
 ABILITY:eitr_abilities_class.lst
 ABILITY:eitr_feats.lst
