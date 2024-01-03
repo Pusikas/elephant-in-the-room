@@ -30,3 +30,5 @@ COPYRIGHT:Pathfinder RPG Bestiary, Copyright 2009, Paizo Publishing, LLC; Author
 ABILITYCATEGORY:eitr_abilitycategories.lst
 ABILITY:eitr_abilities_class.lst
 ABILITY:eitr_feats.lst
+
+ABILITY:eitr_abilities_companion.lst
