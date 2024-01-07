@@ -1,0 +1,74 @@
+# Agile Maneuvers is gone
+CATEGORY=FEAT|Under and Over.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Agile Combatant	PRESIZELTEQ:S
+
+# Combat Expertise is gone
+CATEGORY=FEAT|Disarming Strike.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Deft Maneuvers	PREMULT:1,[PREVARGTEQ:PreStatScore_DEX,13],[PREVARGTEQ:CombatFeatDexRequirement,13]	PRETOTALAB:9
+CATEGORY=FEAT|Gang Up.MOD	PRE:.CLEAR	PREMULT:1,[PREVARGTEQ:PreStatScore_DEX,13],[PREVARGTEQ:CombatFeatDexRequirement,13]
+CATEGORY=FEAT|Greater Dirty Trick.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Deft Maneuvers	PREMULT:1,[PREVARGTEQ:PreStatScore_DEX,13],[PREVARGTEQ:CombatFeatDexRequirement,13]	PRETOTALAB:6
+CATEGORY=FEAT|Greater Reposition.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Deft Maneuvers	PREMULT:1,[PREVARGTEQ:PreStatScore_DEX,13],[PREVARGTEQ:CombatFeatDexRequirement,13]	PRETOTALAB:6
+CATEGORY=FEAT|Greater Steal.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Deft Maneuvers	PREMULT:1,[PREVARGTEQ:PreStatScore_DEX,13],[PREVARGTEQ:CombatFeatDexRequirement,13]	PRETOTALAB:6
+
+CATEGORY=FEAT|Deft Maneuvers.MOD	BONUS:VAR|CMB_DirtyTrick,CMD_DirtyTrick|2
+CATEGORY=FEAT|Improved Dirty Trick.FORGET
+CATEGORY=FEAT|Deft Maneuvers.MOD	BONUS:VAR|CMB_Reposition,CMD_Reposition|2
+CATEGORY=FEAT|Improved Reposition.FORGET
+
+CATEGORY=FEAT|Improved Second Chance.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Second Chance	PREMULT:1,[PREVARGTEQ:PreStatScore_DEX,13],[PREVARGTEQ:CombatFeatDexRequirement,13]	PRETOTALAB:11
+
+CATEGORY=FEAT|Deft Maneuvers.MOD	BONUS:VAR|CMB_Steal,CMD_Steal|2
+CATEGORY=FEAT|Improved Steal.FORGET
+
+CATEGORY=FEAT|Repositioning Strike.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Deft Maneuvers	PREMULT:1,[PREVARGTEQ:PreStatScore_DEX,13],[PREVARGTEQ:CombatFeatDexRequirement,13]	PRETOTALAB:9
+CATEGORY=FEAT|Second Chance.MOD	PRE:.CLEAR	PREMULT:1,[PREVARGTEQ:PreStatScore_DEX,13],[PREVARGTEQ:CombatFeatDexRequirement,13]	PRETOTALAB:6
+CATEGORY=FEAT|Swift Aid.MOD	PRE:.CLEAR	PREMULT:1,[PREVARGTEQ:PreStatScore_DEX,13],[PREVARGTEQ:CombatFeatDexRequirement,13]	PRETOTALAB:6
+CATEGORY=FEAT|Team Up.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Gang Up	PREMULT:1,[PREVARGTEQ:PreStatScore_DEX,13],[PREVARGTEQ:CombatFeatDexRequirement,13]	PRETOTALAB:6
+CATEGORY=FEAT|Tripping Strike.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Deft Maneuvers	PREMULT:1,[PREVARGTEQ:PreStatScore_DEX,13],[PREVARGTEQ:CombatFeatDexRequirement,13]	PRETOTALAB:9
+
+# Improved Unarmed Strike is gone
+CATEGORY=FEAT|Cockatrice Strike.MOD	PRE:.CLEAR	PREABILITY:3,CATEGORY=FEAT,Unarmed Combatant,Gorgon's Fist,Medusa's Wrath	PRETOTALAB:14
+CATEGORY=FEAT|Elemental Fist.MOD	PRE:.CLEAR	PREMULT:1,[PREVAREQ:ElementalFistGranted,1],[PREABILITY:1,CATEGORY=FEAT,Dragon Ferocity],[PREMULT:3,[PRETOTALAB:8],[PREABILITY:1,CATEGORY=FEAT,Unarmed Combatant],[PRESTAT:2,CON=13,WIS=13]]
+CATEGORY=FEAT|Elemental Fist.MOD	BONUS:VAR|ElementalFistFullVersion|-1|PREMULT:1,[PREVAREQ:ElementalFistGranted,1],[PREMULT:3,[PRETOTALAB:8],[PREABILITY:1,CATEGORY=FEAT,Improved Unarmed Strike],[PRESTAT:2,CON=13,WIS=13]]
+CATEGORY=FEAT|Elemental Fist.MOD	BONUS:VAR|ElementalFistFullVersion|1|PREMULT:1,[PREVAREQ:ElementalFistGranted,1],[PREMULT:3,[PRETOTALAB:8],[PREABILITY:1,CATEGORY=FEAT,Unarmed Combatant],[PRESTAT:2,CON=13,WIS=13]]
+CATEGORY=FEAT|Ki Throw.MOD	PRE:.CLEAR	PREABILITY:2,CATEGORY=FEAT,Deft Maneuvers,Unarmed Combatant
+CATEGORY=FEAT|Perfect Strike.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Unarmed Combatant	PREMULT:1,[PREVARGTEQ:PreStatScore_DEX,13],[PREVARGTEQ:FeatDexRequirement,13]	PRESTAT:1,WIS=13	PRETOTALAB:8
+CATEGORY=FEAT|Punishing Kick.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Unarmed Combatant	PRESTAT:2,CON=13,WIS=13	PRETOTALAB:8
+CATEGORY=FEAT|Touch of Serenity.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Unarmed Combatant	PRESTAT:1,WIS=18	PRETOTALAB:8
+
+# Mobility is gone
+CATEGORY=FEAT|Combat Patrol.MOD	PRE:.CLEAR	PREABILITY:2,CATEGORY=FEAT,Combat Reflexes,Dodge	PRETOTALAB:5
+CATEGORY=FEAT|Improved Sidestep.MOD	PRE:.CLEAR	PREABILITY:2,CATEGORY=FEAT,Dodge,Sidestep	PREMULT:1,[PREVARGTEQ:PreStatScore_DEX,15],[PREVARGTEQ:FeatDexRequirement,15]
+CATEGORY=FEAT|Parting Shot.MOD	PRE:.CLEAR	PREABILITY:3,CATEGORY=FEAT,Dodge,Precise Shot,Shot on the Run	PREMULT:1,[PREVARGTEQ:PreStatScore_DEX,13],[PREVARGTEQ:FeatDexRequirement,13]	PRETOTALAB:6
+CATEGORY=FEAT|Sidestep.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Dodge	PREMULT:1,[PREVARGTEQ:PreStatScore_DEX,13],[PREVARGTEQ:FeatDexRequirement,13]
+CATEGORY=FEAT|Underfoot.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Dodge	PRESIZELTEQ:S	BENEFIT:You receive a +4 dodge bonus on Acrobatics checks to move past opponents without provoking attacks of opportunity, so long as they are larger than you. In addition, you gain a +2 dodge bonus to Armor Class against attacks of opportunity caused when you move out of or within a larger opponent's threatened area (this stacks with the +4 bonus provided by Dodge, for a total bonus of +6).
+
+# Power Attack is gone
+CATEGORY=FEAT|Bloody Assault.MOD	PRE:.CLEAR	PRETOTALAB:6	PRESTAT:1,STR=13
+CATEGORY=FEAT|Bull Rush Strike.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Powerful Maneuvers	PRESTAT:1,STR=13	PRETOTALAB:9
+CATEGORY=FEAT|Charge Through.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Powerful Maneuvers	PRESTAT:1,STR=13	PRETOTALAB:1
+CATEGORY=FEAT|Dazing Assault.MOD	PRE:.CLEAR	PRESTAT:1,STR=13	PRETOTALAB:11
+CATEGORY=FEAT|Dreadful Carnage.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Furious Focus	PRESTAT:1,STR=15	PRETOTALAB:11
+CATEGORY=FEAT|Furious Focus.MOD	PRE:.CLEAR	PRESTAT:1,STR=13	PRETOTALAB:1	BENEFIT:When you are wielding a two-handed weapon or a one-handed weapon with two hands, and using the Risky Strike combat option, you do not suffer Risky Strike's penalty on melee attack rolls on the first attack you make each turn. You still suffer the penalty on any additional attacks, including attacks of opportunity.
+CATEGORY=FEAT|Greater Drag.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Powerful Maneuvers	PRESTAT:1,STR=13	PRETOTALAB:6
+
+CATEGORY=FEAT|Powerful Maneuvers.MOD	BONUS:VAR|CMB_Drag,CMD_Drag|2
+CATEGORY=FEAT|Improved Drag.FORGET
+
+CATEGORY=FEAT|Pushing Assault.MOD	PRE:.CLEAR	PRESTAT:1,STR=15	PRETOTALAB:1	BENEFIT:When you hit a creature your size or smaller with a two-handed weapon attack modified by the Risky Strike combat option, you can choose to push the target 5 feet directly away from you instead of dealing the extra damage from Risky Strike. If you score a critical hit, you can instead push the target 10 feet directly away from you. This movement does not provoke attacks of opportunities, and the target must end this move in a safe space it can stand in. You choose which effect to apply after the attack roll has been made, but before the damage is rolled.
+CATEGORY=FEAT|Shield of Swings.MOD	PRE:.CLEAR	PRESTAT:1,STR=13	PRETOTALAB:1
+CATEGORY=FEAT|Smash.MOD	PRE:.CLEAR	PRERACE:1,Half-Orc
+CATEGORY=FEAT|Stunning Assault.MOD	PRE:.CLEAR	PRESTAT:1,STR=13	PRETOTALAB:16
+CATEGORY=FEAT|Sundering Strike.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Powerful Maneuvers	PRESTAT:1,STR=13	PRETOTALAB:9
+
+# Point-Blank Shot is replaced by Precise Shot
+CATEGORY=FEAT|Crossbow Mastery.MOD	PRE:.CLEAR	PREABILITY:3,CATEGORY=FEAT,Precise Shot,Rapid Reload,Rapid Shot	PREMULT:1,[PREVARGTEQ:PreStatScore_DEX,15],[PREVARGTEQ:FeatDexRequirement,15]
+CATEGORY=FEAT|Disrupting Shot.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Precise Shot	PRECLASS:1,Fighter=6	PREMULT:1,[PREVARGTEQ:PreStatScore_DEX,13],[PREVARGTEQ:FeatDexRequirement,13]
+CATEGORY=FEAT|Focused Shot.MOD	PRE:.CLEAR	PREABILITY:1,CATEGORY=FEAT,Precise Shot	PREMULT:1,[PRESTAT:1,INT=13],[PREVARGTEQ:CombatFeatIntRequirement,13]
+
+# Other Changes
+CATEGORY=FEAT|Elemental Spell.MOD	BENEFIT:You may replace a spell's normal damage with one of the following energy types: acid, cold, electricity, or fire. You may also choose to split the spell's damage, so that half is of that energy type and half is of its normal type. An elemental spell does not use up a higher-level spell slot than the spell's actual level.
+
+CATEGORY=FEAT|Deft Maneuvers.MOD	TYPE:DruidShamanSerpent
+CATEGORY=FEAT|Greater Feint.MOD	TYPE:DruidShamanSerpent
+
+CATEGORY=FEAT|Deft Maneuvers.MOD	TYPE:DruidShamanWolf
+CATEGORY=FEAT|Whirlwind Attack.MOD	TYPE:DruidShamanWolf

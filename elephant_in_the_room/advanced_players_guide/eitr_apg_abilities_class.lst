@@ -1,0 +1,8 @@
+
+CATEGORY=Special Ability|Serpent Shaman ~ Bonus Feat.MOD	DESC:At 9th level and every 4 levels thereafter, a serpent shaman gains one of the following bonus feats: Deft Maneuvers, Skill Focus (Bluff), Stealthy, or Strike Back. She must meet the prerequisites for these bonus feats. This ability replaces venom immunity.
+CATEGORY=Special Ability|Wolf Shaman ~ Bonus Feat.MOD	DESC:At 9th level and every 4 levels thereafter, a wolf shaman gains one of the following bonus feats: Deft Maneuvers, Greater Trip, Skill Focus (Stealth), Spring Attack, or Whirlwind Attack. She must meet the prerequisites for these bonus feats. This ability replaces venom immunity.
+
+CATEGORY=Special Ability|Maneuver Mastery ~ Trip.MOD	ABILITY:FEAT|AUTOMATIC|.CLEAR.Improved Trip	ABILITY:FEAT|AUTOMATIC|Deft Maneuvers|PRECLASS:1,Oracle=7
+CATEGORY=Special Ability|Stone Mystery ~ Stone Stability.MOD	DESC:You receive a +4 bonus to your Combat Maneuver Defense when resisting a bull rush or trip attempt while standing on the ground. At 5th level, you gain Deft Maneuvers as a bonus feat. At 10th level, you gain Greater Trip as a bonus feat. You do not need to meet the prerequisites to gain these feats.	ABILITY:FEAT|VIRTUAL|.CLEAR.Improved Trip	ABILITY:FEAT|VIRTUAL|Deft Maneuvers|PRECLASS:1,Oracle=5
+
+Weapon Mastery	KEY:Battle Mystery ~ Weapon Mastery	CATEGORY:Special Ability	TYPE:OracleClassFeatures.SpecialQuality.OracleRevelation.BattleRevelation.Extraordinary	MULT:YES	CHOOSE:WEAPONPROFICIENCY|PC	ABILITY:FEAT|VIRTUAL|Weapon Focus(%LIST)	ABILITY:FEAT|VIRTUAL|Improved Critical(%LIST)|PRECLASS:1,Oracle=8	ABILITY:FEAT|VIRTUAL|Greater Weapon Focus(%LIST)|PRECLASS:1,Oracle=12	SOURCEPAGE:p.46

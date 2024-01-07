@@ -15,6 +15,7 @@ SOURCEWEB:https://mammothisland.itch.io/elephant
 SOURCEDATE:2021-04
 RANK:8
 ISOGL:YES
+PRECAMPAIGN:1,INCLUDES=Core Rulebook
 
 INFOTEXT:ogl.txt
 INFOTEXT:ogl_declaration.txt
@@ -27,8 +28,10 @@ COPYRIGHT:System Reference Document. Copyright 2000, Wizards of the Coast, Inc.;
 COPYRIGHT:Pathfinder RPG Core Rulebook. Copyright 2009, Paizo Publishing, LLC; Author: Jason Bulmahn, based on material by Jonathan Tweet, Monte Cook, and Skip Williams.
 COPYRIGHT:Pathfinder RPG Bestiary, Copyright 2009, Paizo Publishing, LLC; Author: Jason Bulmahn, based on material by Jonathan Tweet, Monte Cook, and Skip Williams.
 
-ABILITYCATEGORY:eitr_abilitycategories.lst
-ABILITY:eitr_abilities_class.lst
-ABILITY:eitr_feats.lst
+ABILITYCATEGORY:core_rulebook/eitr_core_abilitycategories.lst
+ABILITY:core_rulebook/eitr_core_abilities_class.lst
+ABILITY:core_rulebook/eitr_core_feats.lst
+ABILITY:core_rulebook/eitr_core_abilities_companion.lst
 
-ABILITY:eitr_abilities_companion.lst
+ABILITY:advanced_players_guide/eitr_apg_abilities_class.lst|PRECAMPAIGN:1,INCLUDES=Advanced Player's Guide
+ABILITY:advanced_players_guide/eitr_apg_feats.lst|PRECAMPAIGN:1,INCLUDES=Advanced Player's Guide
