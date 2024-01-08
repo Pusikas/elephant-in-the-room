@@ -29,6 +29,7 @@ COPYRIGHT:Pathfinder RPG Core Rulebook. Copyright 2009, Paizo Publishing, LLC; A
 COPYRIGHT:Pathfinder RPG Bestiary, Copyright 2009, Paizo Publishing, LLC; Author: Jason Bulmahn, based on material by Jonathan Tweet, Monte Cook, and Skip Williams.
 
 ABILITYCATEGORY:core_rulebook/eitr_core_abilitycategories.lst
+ABILITY:core_rulebook/eitr_core_abilities.lst
 ABILITY:core_rulebook/eitr_core_abilities_class.lst
 ABILITY:core_rulebook/eitr_core_feats.lst
 ABILITY:core_rulebook/eitr_core_abilities_companion.lst

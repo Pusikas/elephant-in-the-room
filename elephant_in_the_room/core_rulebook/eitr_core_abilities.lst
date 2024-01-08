@@ -1,0 +1,40 @@
+SOURCELONG:The Elephant in the Room - Feat Taxes in Pathfinder	SOURCESHORT:EITR	SOURCEWEB:https://mammothisland.itch.io/elephant	SOURCEDATE:2021-04
+
+Risky Strike	CATEGORY:Special Ability	TYPE:SpecialAttack.Speacial Attack.AttackOption	SOURCEPAGE:p.33
+CATEGORY=Special Ability|Risky Strike.MOD	VISIBLE:YES
+CATEGORY=Special Ability|Risky Strike.MOD	DEFINE:PowerAttackModifier|0
+CATEGORY=Special Ability|Risky Strike.MOD	DEFINE:MonkFlurryPowerAttackModifier|0
+CATEGORY=Special Ability|Risky Strike.MOD	DEFINE:PowerAttackDamageModifier|0
+CATEGORY=Special Ability|Risky Strike.MOD	DEFINE:PowerAttackDamageBase|0
+CATEGORY=Special Ability|Risky Strike.MOD	ABILITY:FEAT|VIRTUAL|Power Attack (Light)|Power Attack (Off-Hand)|Power Attack (One-Handed)|Power Attack (Two-Handed)
+CATEGORY=Special Ability|Risky Strike.MOD	ABILITY:FEAT|VIRTUAL|Power Attack (Flurry)|PRECLASS:1,Monk=1
+CATEGORY=Special Ability|Risky Strike.MOD	ABILITY:FEAT|VIRTUAL|Power Attack (Natural Secondary)|PREABILITY:1,CATEGORY=Internal,TYPE.NaturalAttackSecondary
+CATEGORY=Special Ability|Risky Strike.MOD	ABILITY:FEAT|VIRTUAL|Power Attack (Natural Primary)|PREABILITY:1,CATEGORY=Internal,TYPE.NaturalAttackPrimary
+CATEGORY=Special Ability|Risky Strike.MOD	ABILITY:FEAT|VIRTUAL|Power Attack (Natural Primary - Single)|PREABILITY:1,CATEGORY=Internal,TYPE.NaturalAttackPrimarySingle
+CATEGORY=Special Ability|Risky Strike.MOD	BONUS:VAR|PowerAttackModifier|(BAB/4)+1
+CATEGORY=Special Ability|Risky Strike.MOD	BONUS:VAR|PowerAttackDamageBase|2
+CATEGORY=Special Ability|Risky Strike.MOD	BONUS:VAR|PowerAttackDamageModifier|PowerAttackDamageBase*floor(PowerAttackModifier)
+CATEGORY=Special Ability|Risky Strike.MOD	BONUS:VAR|MonkFlurryPowerAttackModifier|BAB+(FlurryLVL-MonkBAB)
+CATEGORY=Special Ability|Risky Strike.MOD	DESC:You can choose to take a -%1 penalty on all attack rolls and combat maneuver checks to gain a +%2 bonus on all damage rolls. This bonus to damage is increased by half (+50%%) if you are making an attack with a two-handed weapon, a one handed weapon using two hands, or a primary natural weapon that adds 1-1/2 times your Strength modifier on damage rolls. This bonus to damage is halved (-50%%) if you are making an attack with an off-hand weapon or secondary natural weapon. You must choose to use Risky Strike before making an attack roll, and its effects last until your next turn. The bonus damage does not apply to touch attacks or effects that do not deal hit point damage.|PowerAttackModifier|PowerAttackDamageModifier
+CATEGORY=Special Ability|Risky Strike.MOD	DEFINE:DeadlyAimModifier|0
+CATEGORY=Special Ability|Risky Strike.MOD	BONUS:VAR|DeadlyAimModifier|floor(BAB/4)+1
+CATEGORY=Special Ability|Risky Strike.MOD	TEMPBONUS:EQ|Weapon,Ranged|WEAPON|DAMAGE|2*DeadlyAimModifier|TYPE=Temporary
+CATEGORY=Special Ability|Risky Strike.MOD	TEMPBONUS:EQ|Weapon,Ranged|WEAPON|TOHIT|-DeadlyAimModifier|TYPE=Temporary
+
+CATEGORY=Internal|Default.MOD	ABILITY:Special Ability|AUTOMATIC|Risky Strike|PRETOTALAB:1
+
+Defensive Stance	CATEGORY:Special Ability	TYPE:SpecialAttack.Speacial Attack.AttackOption	SOURCEPAGE:p.33
+CATEGORY=Special Ability|Defensive Stance.MOD	VISIBLE:YES
+CATEGORY=Special Ability|Defensive Stance.MOD	DEFINE:CombatExpertiseModifier|0
+CATEGORY=Special Ability|Defensive Stance.MOD	DEFINE:CombatExpertiseModifierAttack|0
+CATEGORY=Special Ability|Defensive Stance.MOD	DEFINE:CombatExpertiseModifierAC|0
+CATEGORY=Special Ability|Defensive Stance.MOD	BONUS:VAR|CombatExpertiseModifier|((BAB+(FlurryLVL-MonkBAB))/4)+1|TYPE=Base
+CATEGORY=Special Ability|Defensive Stance.MOD	BONUS:VAR|CombatExpertiseModifierAttack|-CombatExpertiseModifier|TYPE=Base
+CATEGORY=Special Ability|Defensive Stance.MOD	BONUS:VAR|CombatExpertiseModifierAC|CombatExpertiseModifier|TYPE=Base
+CATEGORY=Special Ability|Defensive Stance.MOD	DESC:You can choose to take a %1 penalty on melee attack rolls and combat maneuver checks to gain a +%2 dodge bonus to your Armor Class. You must choose to use Defensive Stance e before making an attack roll and its effects last until your next turn.|CombatExpertiseModifierAttack|CombatExpertiseModifierAC
+CATEGORY=Special Ability|Defensive Stance.MOD	TEMPBONUS:PC|COMBAT|AC|CombatExpertiseModifierAC|TYPE=Dodge
+CATEGORY=Special Ability|Defensive Stance.MOD	TEMPBONUS:PC|COMBAT|TOHIT,MELEE|CombatExpertiseModifierAttack|TYPE=Base
+CATEGORY=Special Ability|Defensive Stance.MOD	TEMPBONUS:PC|VAR|CMB|CombatExpertiseModifierAttack|TYPE=Base
+CATEGORY=Special Ability|Defensive Stance.MOD	TEMPBONUS:PC|VAR|CMD|CombatExpertiseModifierAC|TYPE=Base
+
+CATEGORY=Internal|Default.MOD	ABILITY:Special Ability|AUTOMATIC|Defensive Stance|PRETOTALAB:1
